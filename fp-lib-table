@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name OpenAmiga500FastRamExpansion)(type KiCad)(uri ${KIPRJMOD}/OpenAmiga500FastRamExpansion.pretty)(options "")(descr ""))
+)

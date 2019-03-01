@@ -1,14 +1,12 @@
 # OpenAmiga500FastRamExpansion
-OpenAmiga500FastRamExpansion is an Open Hardware 4 MB Fast RAM Expansion for the Commodore Amiga 600 Computer.
+OpenAmiga500FastRamExpansion is an Open Hardware 4/8 MB Fast RAM Expansion for the Commodore Amiga 500 Computer.
 
 ![Board](https://raw.githubusercontent.com/SukkoPera/OpenAmiga500FastRamExpansion/master/doc/render-top.png)
 
 ### Summary
 Most low-end Amiga models only came with *Chip RAM*. "Big Box" models allowed for a different type of memory to be installed, known as *Fast RAM*, where *fast* means that it's dedicated to the main processor, so that it doesn't have to compete with the other chips in order to gain access to it (as is the case with Chip RAM). While both Chip and Fast RAM are limited in size, you can have at least a few MB of the latter on all Amigas (usually up to 8), while the former can never exceed 2 MB.
 
-OpenAmiga500FastRamExpansion will allow you to add 4 MB of Fast RAM to your Amiga 600. This way you will be able to run more applications at once and more quickly. If you combine it with [a chip RAM expansion](https://github.com/SukkoPera/OpenAmiga600RamExpansion), you will also be able to run almost all games supported by WHDLoad, pushing the smallest of the Amigas to its limits. The Fast RAM will be mapped to `$200000-$5fffff`, which means it will not interfere with the PCMCIA address space.
-
-Note that the A600 was not originally designed to support a Fast RAM expansion, which means Commodore didn't provide any connector for it. In theory it could be sandwiched between the CPU and mainboard, as usually done on A500s, but in the A600 the CPU is soldered directly to the mainboard and cannot be removed. Thus the only way to install it is to clip it over the CPU, using a PLCC socket placed upside-down. PLCC sockets are not meant to be used this way, so this is really a bit of a hack and might not even work in all cases. Space around the CPU is quite limited, hence the odd shape of this board.
+OpenAmiga500FastRamExpansion will allow you to add 4 or 8 MB of Fast RAM to your Amiga 600. This way you will be able to run more applications at once and more quickly. If you combine it with [a chip RAM expansion](https://github.com/SukkoPera/OpenAmiga600RamExpansion), you will also be able to run almost all games supported by WHDLoad, pushing your Amiga to its limits. The Fast RAM will be mapped to `$200000-$7fffff`.
 
 OpenAmiga500FastRamExpansion is basically a clone of [a RAM expansion produced by Kipper2K a few years ago](http://eab.abime.net/showthread.php?t=64218), based on [an earlier design by lvd/NedoPC](http://lvd.nedopc.com/Projects/a600_8mb/index.html). He has since stopped producing and selling these cards and I thought it was a pity that he didn't open his designs and actually took all of them down, as this card is quite cheap to build and really useful. So I set about recreating it from scratch. Kipper2K has also made other expansions, including an 8 MB version of this card, but I chose to work on this one as it was simpler and probably enough for most uses. Other cards might come in the future.
 
@@ -36,7 +34,7 @@ Lots of A600s (and of A1200s, for the record) have issues with leaking electroly
 
 Before soldering the CPU socket you will need to rework it a bit: you should sand down one of its edges, or it will hit resistor R102 that is present in REV 1.5 boards (at least). Thus try to fit it on the CPU (the large square chip with *MC68000* written on it) and see which corner it is. Make sure to match the correct orientation: one of the corners of the chip is cut and, if you look at the socket, one of its corners will match that.
 
-Besides that, most PLCC sockets have some sort of "stand-offs" on the bottom (which is going to be our top), which you are recommended to sand down, too. I also suggest to clean the CPU pins if possible, using contact cleaner or isopropyl alcool, as all sorts of gunk have probably gathered on them over the years. Let them dry well then. All of this should hopefully make the socket fit better on the chip. 
+Besides that, most PLCC sockets have some sort of "stand-offs" on the bottom (which is going to be our top), which you are recommended to sand down, too. I also suggest to clean the CPU pins if possible, using contact cleaner or isopropyl alcool, as all sorts of gunk have probably gathered on them over the years. Let them dry well then. All of this should hopefully make the socket fit better on the chip.
 
 After you solder the socket, you can cut the bottom of it so that the window in the PCB continues through the socket. Most sockets will already have holes on the bottom that will make this operation easier. This will allow you to install a 14x14mm heatsink on the CPU, which might be a good idea since installing the board will somewhat reduce the heat dissipation capabilities of the chip. Make sure to use good thermal adhesive/glue, otherwise you risk to make the dissipation even worse.
 

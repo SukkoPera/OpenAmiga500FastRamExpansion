@@ -22,6 +22,8 @@ Normally it is not necessary to mount all the decoupling capacitors. I usually s
 
 After everything has been soldered, you will need to program the CPLD. Whenever you do so, **make sure to carefully remove the board from your Amiga, or you might risk damaging it**. Use the typical cheap *USB Blaster* clone you can find on eBay for the task.
 
+For the 4 MB version, solder only U7 and U8 and use the dedicated CPLD firmware.
+
 When assembly is complete, open your A500 and remove the top shield. Carefully remove the CPU (leftmost chip), using a chip extractor or a small flat screwdriver, taking care not to break/bend any pins. Plug it on the board, matching the orientation, and plug the whole board in the CPU socket.
 
 Before reassembling your case, I recommend to run [SysTest](https://github.com/keirf/Amiga-Stuff). Use the Memory option (<kbd>F1</kbd>), it must show 4 MB of Fast RAM. Then start the Memory Test (<kbd>F1</kbd> again) and let it run for 50-100 rounds: if it doesn't find any errors, you are probably good to go. If you get any errors, check your solder joints, starting from those for the RAM chips.

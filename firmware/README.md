@@ -1,16 +1,22 @@
+# Firmware
 This board uses the same firmware as the original project by lvd. It has been copied here for convenience, but it is unmodified.
 
 The firmware was originally developed for Altera EPM7032SLC44 CPLDs, these use the .POF file. You can flash it with `quartus_pgm` and one of the cheap USB Blaster programmer clones you can find everywhere.
 
 Atmel/Microchip makes compatible devices under the ATF1502 series, so the ATF1502AS10JC44 can be used as an alternative, which is easier to find nowadays. It can be programmed with the .JED file using the [ATDH1150USB](https://www.microchip.com/DevelopmentTools/ProductDetails/ATDH1150USB) programmer.
 
-The bottom line is that you will only find the ATF1502AS10JC44 on the market, but you will need to use a >50€ programmer (only once!) to program it, which doesn't sound reasonable. Besides, all the tools mentioned above are Windows-only, so if you are a Linux user like me, you're pretty screwed. Luckily, there is a solution that allows flashing the Atmel chip with the cheap USB Blaster clones. I have developed and tested it under Linux, but it should also work on Windows and OS X.
-
 ## Flashing the firmware
+Before installing the board into your Amiga, you will need to flash the firmware to the CPLD chip.
+
+If you read the above, you will know that these days you will only find the ATF1502AS10JC44 on the market, but you will need to use a >50€ programmer (only once!) to program it, which doesn't sound reasonable. Besides, all the tools mentioned above are Windows-only so if you are a Linux user like me, you're pretty screwed. Luckily, there is a solution that allows flashing the Atmel chip with the cheap USB Blaster clones. I have developed and tested it under Linux, but it should also work on Windows and OS X.
+
+First of all you need to power the board. JTAG programmers are not supposed to provide power, so you need to do so separately. The board does not have a dedicated connector for this, but you can use the pads of C1 (which I don't recommend installing, unless you have stability issues) or pins 2 (GND) and 4 (VCC) of the IDC connector. The board needs 5V, i usually take those from an Arduino board but feel free to use whatever suits you.
+
 You will need the firmware in SVF format (either `4mb.svf` or `8mb.svf`, choose according to how you assembled your board) and the [U2JTAG software](http://urjtag.sourceforge.net). Connect your USB Blaster to the IDC connector on the board and plug it into an USB port on your PC. Then run urjtag as follows:
 
-sukko@shockwave firmware $ sudo jtag
 ```
+sukko@shockwave firmware $ sudo jtag
+
 UrJTAG 2018.09 #
 Copyright (C) 2002, 2003 ETC s.r.o.
 Copyright (C) 2007, 2008, 2009 Kolja Waschk and the respective authors
@@ -63,10 +69,10 @@ The firmware was developed with quartus 7.2, somewhat totally old and outdated, 
 If you want to move to something newer, it seems that quartus 10.x and 11.x are still supporting EPM7000S chips. Starting from quartus 12.x there's no more support for that devices.
 
 ### POF => JED
-Quartus will produce a .POF file. This can be converted to a .JED file for Atmel devices through [Microchip's POF2JED utility](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/pof2jed).
+Quartus will produce a .POF file. This can be converted to a .JED file for Atmel devices through [Microchip's POF2JED utility](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/pof2jed), which is Windows-only unfortunately.
 
 ### JED => SVF
-An SVF file can be produced using [Microchip's ATMISP tool](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/atmisp), which is Windows-only unfortunately.
+An SVF file can be produced using [Microchip's ATMISP tool](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/atmisp), which is also Windows-only.
 
 
 *Thanks a lot to lvd for providing most of the above information and helping me come up with the Linux flashing procedure.*

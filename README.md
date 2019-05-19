@@ -13,7 +13,18 @@ OpenAmiga500FastRamExpansion is basically a clone of [a RAM expansion produced b
 ### Memory Compatibility
 The required RAM Type is 16 Mbit (1M×16) DRAM in the SOJ-42 package with up to 70-80 ns access time. It is 5v-only DRAM (not SD(!)RAM) often found in old 72-pin SIMMs, EDO chips might work or not. All chips having *8160* in their part number should be OK.
 
-See [OpenAmiga600FastRamExpansion](https://github.com/SukkoPera/OpenAmiga600FastRamExpansion#memory-compatibility) for a compatibility list.
+|Model         |Maker            |Tested             |Working            |Data Sheet                                                                                                                                                                 |Notes                                                                                |
+|--------------|-----------------|:-----------------:|:-----------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|-------------------------------------------------------------------------------------|
+|AS4C1M116E5   |Alliance         |![No](doc/no.png)  |                   |                                                                                                                                                                           |                                                                                     |
+|GM71C18160    |Hynix/LGS        |![Yes](doc/yes.png)|![Yes](doc/yes.png)|[![PDF](doc/doc.png)](https://github.com/lvd2/A600_8mb_2008/blob/master/DRAM_datasheets/GM71C18160.pdf)                                                                    |                                                                                     |
+|HY5118164B    |Hynix            |![No](doc/no.png)  |                   |                                                                                                                                                                           |                                                                                     |
+|KM416C1200AJ  |SEC              |![No](doc/no.png)  |                   |                                                                                                                                                                           |                                                                                     |
+|KM416C1204AJ  |SEC              |![No](doc/no.png)  |                   |                                                                                                                                                                           |                                                                                     |
+|MSM5118160    |OKI              |![Yes](doc/yes.png)|![Yes](doc/yes.png)|[![PDF](doc/doc.png)](https://github.com/lvd2/A600_8mb_2008/blob/master/DRAM_datasheets/msm5118160.pdf)                                                                    |                                                                                     |
+|TMS41860DZ    |Texas Instruments|![No](doc/no.png)  |                   |                                                                                                                                                                           |                                                                                     |
+|TMS41869DZ    |Texas Instruments|![No](doc/no.png)  |                   |                                                                                                                                                                           |                                                                                     |
+|4218160       |NEC              |![No](doc/no.png)  |                   |                                                                                                                                                                           |                                                                                     |
+|4218165       |NEC              |![Yes](doc/yes.png)|![Yes](doc/yes.png)|[![PDF](doc/doc.png)](https://www.datasheetarchive.com/pdf/download.php?id=5f10686e336fc0bb44481c8b0f0340b8d05d8a&type=O&term=NEC%252B4218165-60)                          |                                                                                     |
 
 RAM chips can either be soldered directly to the board or installed in sockets. While soldering the chips might not be trivial for the unexperienced, sockets for the SOJ-42 package are hard to find and not really easier to solder either, so the choice is up to you.
 
@@ -26,7 +37,7 @@ For the 4 MB version, solder only U7 and U8 and use the dedicated CPLD firmware.
 
 When assembly is complete, open your A500 and remove the top shield. Carefully remove the CPU (leftmost chip), using a chip extractor or a small flat screwdriver, taking care not to break/bend any pins. Plug it on the board, matching the orientation, and plug the whole board in the CPU socket.
 
-Before reassembling your case, I recommend to run [SysTest](https://github.com/keirf/Amiga-Stuff). Use the Memory option (<kbd>F1</kbd>), it must show 4/8 MB of Fast RAM. Then start the Memory Test (<kbd>F1</kbd> again) and let it run for 50-100 rounds: if it doesn't find any errors, you are probably good to go. If you get any errors, check your solder joints, starting from actual the RAM chips, as the SOJ package is not very hand-soldering-friendly.
+Before reassembling your case, I recommend to run [SysTest/Amiga Test Kit](https://github.com/keirf/Amiga-Stuff). Use the Memory option (<kbd>F1</kbd>), it must show 4/8 MB of Fast RAM. Then start the Memory Test (<kbd>F1</kbd> again) and let it run for 50-100 rounds: if it doesn't find any errors, you are probably good to go. If you get any errors, check your solder joints, starting from actual the RAM chips, as the SOJ package is not very hand-soldering-friendly.
 
 ### License
 The OpenAmiga500FastRamExpansion documentation, including the design itself, is copyright &copy; SukkoPera 2019.
@@ -52,7 +63,9 @@ You get my gratitude and cheap, professionally-made and good quality PCBs, I get
 
 Also, if you still have to register to that site, [you can use this link](https://www.pcbway.com/setinvite.aspx?inviteid=41100) to get some bonus initial credit (and yield me some more).
 
-Again, if you want to use another manufacturer, feel free to, don't feel obligated :).
+Again, if you want to use another manufacturer, feel free to, don't feel obligated :). But then you can buy me a coffee if you want:
+
+<a href='https://ko-fi.com/L3L0U18L' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 ### Get Help
 If you need help or have questions, you can join [the official Telegram group](https://t.me/joinchat/HUHdWBC9J9JnYIrvTYfZmg).

@@ -1,0 +1,72 @@
+This board uses the same firmware as the original project by lvd. It has been copied here for convenience, but it is unmodified.
+
+The firmware was originally developed for Altera EPM7032SLC44 CPLDs, these use the .POF file. You can flash it with `quartus_pgm` and one of the cheap USB Blaster programmer clones you can find everywhere.
+
+Atmel/Microchip makes compatible devices under the ATF1502 series, so the ATF1502AS10JC44 can be used as an alternative, which is easier to find nowadays. It can be programmed with the .JED file using the [ATDH1150USB](https://www.microchip.com/DevelopmentTools/ProductDetails/ATDH1150USB) programmer.
+
+The bottom line is that you will only find the ATF1502AS10JC44 on the market, but you will need to use a >50€ programmer (only once!) to program it, which doesn't sound reasonable. Besides, all the tools mentioned above are Windows-only, so if you are a Linux user like me, you're pretty screwed. Luckily, there is a solution that allows flashing the Atmel chip with the cheap USB Blaster clones. I have developed and tested it under Linux, but it should also work on Windows and OS X.
+
+## Flashing the firmware
+You will need the firmware in SVF format (either `4mb.svf` or `8mb.svf`, choose according to how you assembled your board) and the [U2JTAG software](http://urjtag.sourceforge.net). Connect your USB Blaster to the IDC connector on the board and plug it into an USB port on your PC. Then run urjtag as follows:
+
+sukko@shockwave firmware $ sudo jtag
+```
+UrJTAG 2018.09 #
+Copyright (C) 2002, 2003 ETC s.r.o.
+Copyright (C) 2007, 2008, 2009 Kolja Waschk and the respective authors
+
+UrJTAG is free software, covered by the GNU General Public License, and you are
+welcome to change it and/or distribute copies of it under certain conditions.
+There is absolutely no warranty for UrJTAG.
+
+warning: UrJTAG may damage your hardware!
+Type "quit" to exit, "help" for help.
+
+jtag> cable UsbBlaster
+Connected to libftdi driver.
+```
+
+This means that your USB Blaster was detected correctly. Now have it scan the JTAG chain:
+```
+jtag> detect
+IR length: 10
+Chain length: 1
+Device Id: 00000001010100000010000000111111 (0x0150203F)
+  Manufacturer: Atmel (0x03F)
+  Part(0):      ATF1502ASV (0x1502)
+  Stepping:     A
+  Filename:     /usr/share/urjtag/atmel/atf15xx/atf1502as
+```
+
+This means that the CPLD was found and it is ready to be programmed. If you get no output at this step, try disconnecting and reconnecting the USB Blaster or power to the board. Then start the flashing:
+```
+jtag> svf 8mb.svf progress stop
+warning: unimplemented mode 'ABSENT' for TRST
+detail: Parsing   3660/3668 ( 99%)detail:
+detail: Scanned device output matched expected TDO values.
+```
+
+If you get the above output, the flashing was successful and you can start using your board. If instead you get something like:
+```
+jtag> svf 8mb.svf
+warning: unimplemented mode 'ABSENT' for TRST
+Error svf: mismatch at position 64 for TDO
+ in input file between line 2196 col 1 and line 2198 col 32
+```
+
+Then there was an error during the flashing, check your wiring, power and try again.
+
+
+## Tinkering with the firmware
+The firmware was developed with quartus 7.2, somewhat totally old and outdated, but never got any problems with it. I DO NOT recommend using quartus 6.x as I caught it generating wrong designs (in a way, nothing is working and when you swap to quartus 7.2 not touching you project, everything is working back).
+
+If you want to move to something newer, it seems that quartus 10.x and 11.x are still supporting EPM7000S chips. Starting from quartus 12.x there's no more support for that devices.
+
+### POF => JED
+Quartus will produce a .POF file. This can be converted to a .JED file for Atmel devices through [Microchip's POF2JED utility](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/pof2jed).
+
+### JED => SVF
+An SVF file can be produced using [Microchip's ATMISP tool](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/atmisp), which is Windows-only unfortunately.
+
+
+*Thanks a lot to lvd for providing most of the above information and helping me come up with the Linux flashing procedure.*

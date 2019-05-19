@@ -18,7 +18,7 @@ See [OpenAmiga600FastRamExpansion](https://github.com/SukkoPera/OpenAmiga600Fast
 RAM chips can either be soldered directly to the board or installed in sockets. While soldering the chips might not be trivial for the unexperienced, sockets for the SOJ-42 package are hard to find and not really easier to solder either, so the choice is up to you.
 
 ### Assembly and Installation
-Normally it is not necessary to mount all the decoupling capacitors. I usually skip C4 and C7. Maybe capacitor C13 can be left out as well, your choice. R4 should be chosen according to the particular led you will be using for LD1. Actually you are free to skip LD1 and R4 altogether, if you hate power LEDs.
+Normally it is not necessary to mount all the decoupling capacitors. I usually skip C4, C5, C9, C12, C15 and C18. Maybe C1 can be left out as well if you have a good power supply, your choice. R4 must be chosen according to the particular led you will be using for LD1. Actually you are free to skip LD1 and R4 altogether, if you hate power LEDs.
 
 After everything has been soldered, you will need to program the CPLD. Whenever you do so, **make sure to carefully remove the board from your Amiga, or you might risk damaging it**. Use the typical cheap *USB Blaster* clone you can find on eBay for the task.
 
@@ -26,7 +26,7 @@ For the 4 MB version, solder only U7 and U8 and use the dedicated CPLD firmware.
 
 When assembly is complete, open your A500 and remove the top shield. Carefully remove the CPU (leftmost chip), using a chip extractor or a small flat screwdriver, taking care not to break/bend any pins. Plug it on the board, matching the orientation, and plug the whole board in the CPU socket.
 
-Before reassembling your case, I recommend to run [SysTest](https://github.com/keirf/Amiga-Stuff). Use the Memory option (<kbd>F1</kbd>), it must show 4 MB of Fast RAM. Then start the Memory Test (<kbd>F1</kbd> again) and let it run for 50-100 rounds: if it doesn't find any errors, you are probably good to go. If you get any errors, check your solder joints, starting from those for the RAM chips.
+Before reassembling your case, I recommend to run [SysTest](https://github.com/keirf/Amiga-Stuff). Use the Memory option (<kbd>F1</kbd>), it must show 4/8 MB of Fast RAM. Then start the Memory Test (<kbd>F1</kbd> again) and let it run for 50-100 rounds: if it doesn't find any errors, you are probably good to go. If you get any errors, check your solder joints, starting from actual the RAM chips, as the SOJ package is not very hand-soldering-friendly.
 
 ### License
 The OpenAmiga500FastRamExpansion documentation, including the design itself, is copyright &copy; SukkoPera 2019.

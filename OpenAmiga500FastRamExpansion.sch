@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 1 1
 Title "OpenAmiga500FastRamExpansion"
 Date "2019-05-19"
-Rev "1git"
+Rev "1"
 Comp "SukkoPera"
 Comment1 "Based on work by Kipper2K"
 Comment2 "Original design by lvd/NedoPC"
@@ -1520,30 +1520,6 @@ F 3 "" H 11400 10870 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	11400 10000 11400 10120
-Wire Wire Line
-	11400 10720 11400 10870
-$Comp
-L Device:LED LD1
-U 1 1 5CBAB2B0
-P 11400 10270
-F 0 "LD1" V 11345 10348 50  0000 L CNN
-F 1 "LED" V 11436 10348 50  0000 L CNN
-F 2 "OpenAmiga500FastRamExpansion:LED_0805_HandSoldering_ModSilkS" H 11400 10270 50  0001 C CNN
-F 3 "~" H 11400 10270 50  0001 C CNN
-	1    11400 10270
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R4
-U 1 1 5CBCAA9F
-P 11400 10570
-F 0 "R4" H 11410 10710 50  0000 L CNN
-F 1 "10k" V 11400 10500 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 11330 10570 50  0001 C CNN
-F 3 "~" H 11400 10570 50  0001 C CNN
-	1    11400 10570
-	1    0    0    -1  
-$EndComp
 Text Notes 11210 9700 0    50   ~ 0
 POWER LED
 $Comp
@@ -2972,6 +2948,32 @@ Wire Wire Line
 	3620 7760 3190 7760
 Wire Wire Line
 	3620 7660 3190 7660
+$Comp
+L Device:LED LD1
+U 1 1 5CBAB2B0
+P 11400 10625
+F 0 "LD1" V 11345 10703 50  0000 L CNN
+F 1 "LED" V 11436 10703 50  0000 L CNN
+F 2 "OpenAmiga500FastRamExpansion:LED_0805_HandSoldering_ModSilkS" H 11400 10625 50  0001 C CNN
+F 3 "~" H 11400 10625 50  0001 C CNN
+	1    11400 10625
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11400 10775 11400 10870
+Wire Wire Line
+	11400 10420 11400 10475
+$Comp
+L Device:R R4
+U 1 1 5CBCAA9F
+P 11400 10270
+F 0 "R4" H 11470 10270 50  0000 L CNN
+F 1 "10k" V 11400 10200 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 11330 10270 50  0001 C CNN
+F 3 "~" H 11400 10270 50  0001 C CNN
+	1    11400 10270
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	8370 3300 8370 7610
 Wire Bus Line

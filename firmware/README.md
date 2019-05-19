@@ -10,7 +10,7 @@ Before installing the board into your Amiga, you will need to flash the firmware
 
 If you read the above, you will know that these days you will only find the ATF1502AS10JC44 on the market, but you will need to use a >50€ programmer (only once!) to program it, which doesn't sound reasonable. Besides, all the tools mentioned above are Windows-only so if you are a Linux user like me, you're pretty screwed. Luckily, there is a solution that allows flashing the Atmel chip with the cheap USB Blaster clones. I have developed and tested it under Linux, but it should also work on Windows and OS X.
 
-First of all you need to power the board. JTAG programmers are not supposed to provide power, so you need to do so separately. The board does not have a dedicated connector for this, but you can use the pads of C1 (which I don't recommend installing, unless you have stability issues) or pins 2 (GND) and 4 (VCC) of the IDC connector. The board needs 5V, i usually take those from an Arduino board but feel free to use whatever suits you.
+First of all you need to power the board. JTAG programmers are not supposed to provide power, hence you need to do so separately. The board does not have a dedicated power connector, but you can use the pads of C1 (which I don't recommend installing, unless you have stability issues) or pins 2 (GND) and 4 (VCC) of the IDC connector. The board needs 5V, I usually take those from an Arduino board but feel free to use whatever suits you.
 
 You will need the firmware in SVF format (either `4mb.svf` or `8mb.svf`, choose according to how you assembled your board) and the [U2JTAG software](http://urjtag.sourceforge.net). Connect your USB Blaster to the IDC connector on the board and plug it into an USB port on your PC. Then run urjtag as follows:
 
@@ -64,9 +64,9 @@ Then there was an error during the flashing, check your wiring, power and try ag
 
 
 ## Tinkering with the firmware
-The firmware was developed with quartus 7.2, somewhat totally old and outdated, but never got any problems with it. I DO NOT recommend using quartus 6.x as I caught it generating wrong designs (in a way, nothing is working and when you swap to quartus 7.2 not touching you project, everything is working back).
+The firmware was developed with Quartus 7.2, somewhat totally old and outdated, but I never got any problems with it. I DO NOT recommend using Quartus 6.x as I caught it generating wrong designs (in a way, nothing is working and when you swap to Quartus 7.2 not touching you project, everything is working back).
 
-If you want to move to something newer, it seems that quartus 10.x and 11.x are still supporting EPM7000S chips. Starting from quartus 12.x there's no more support for that devices.
+If you want to move to something newer, it seems that Quartus 10.x and 11.x are still supporting EPM7000S chips. Starting from Quartus 12.x there's no more support for that devices.
 
 ### POF => JED
 Quartus will produce a .POF file. This can be converted to a .JED file for Atmel devices through [Microchip's POF2JED utility](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/pof2jed), which is Windows-only unfortunately.

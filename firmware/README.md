@@ -12,7 +12,7 @@ If you read the above, you will know that these days you will only find the ATF1
 
 First of all you need to power the board. JTAG programmers are not supposed to provide power, hence you need to do so separately. The board does not have a dedicated power connector, but you can use the pads of C1 (which I don't recommend installing, unless you have stability issues) or pins 2 (GND) and 4 (VCC) of the IDC connector. The board needs 5V, I usually take those from an Arduino board but feel free to use whatever suits you.
 
-You will need the firmware in SVF format (either `4mb.svf` or `8mb.svf`, choose according to how you assembled your board) and the [U2JTAG software](http://urjtag.sourceforge.net). Connect your USB Blaster to the IDC connector on the board and plug it into an USB port on your PC. Then run urjtag as follows:
+You will need the firmware in SVF format (either `4mb.svf` or `8mb.svf`, choose according to how you assembled your board) and the [UrJTAG software](http://urjtag.sourceforge.net). Connect your USB Blaster to the IDC connector on the board and plug it into an USB port on your PC. Then run urjtag as follows:
 
 ```
 sukko@shockwave firmware $ sudo jtag

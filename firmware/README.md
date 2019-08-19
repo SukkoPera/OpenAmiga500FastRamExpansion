@@ -3,12 +3,12 @@ This board uses the same firmware as the original project by lvd. It has been co
 
 The firmware was originally developed for Altera EPM7032SLC44 CPLDs, these use the .POF file. You can flash it with `quartus_pgm` and one of the cheap USB Blaster programmer clones you can find everywhere.
 
-Atmel/Microchip makes compatible devices under the ATF1502 series, so the ATF1502AS10JC44 can be used as an alternative, which is easier to find nowadays. It can be programmed with the .JED file using the [ATDH1150USB](https://www.microchip.com/DevelopmentTools/ProductDetails/ATDH1150USB) programmer.
+Atmel/Microchip makes compatible devices under the ATF1502 series, so the ATF1502AS-10JC44 can be used as an alternative, which is easier to find nowadays (-10J*U*44 is fine as well). It can be programmed with the .JED file using the [ATDH1150USB](https://www.microchip.com/DevelopmentTools/ProductDetails/ATDH1150USB) programmer.
 
 ## Flashing the firmware
 Before installing the board into your Amiga, you will need to flash the firmware to the CPLD chip.
 
-If you read the above, you will know that these days you will only find the ATF1502AS10JC44 on the market, but you will need to use a >50€ programmer (only once!) to program it, which doesn't sound reasonable. Besides, all the tools mentioned above are Windows-only so if you are a Linux user like me, you're pretty screwed. Luckily, there is a solution that allows flashing the Atmel chip with the cheap USB Blaster clones. I have developed and tested it under Linux, but it should also work on Windows and OS X.
+If you read the above, you will know that these days you will only find the ATF1502AS-10JC44 (or -10JU44) on the market, but you will need to use a >50€ programmer (only once!) to program it, which doesn't sound reasonable. Besides, all the tools mentioned above are Windows-only so if you are a Linux user like me, you're pretty screwed. Luckily, there is a solution that allows flashing the Atmel chip with the cheap USB Blaster clones. I have developed and tested it under Linux, but it should also work on Windows and OS X.
 
 First of all you need to power the board. JTAG programmers are not supposed to provide power, hence you need to do so separately. The board does not have a dedicated power connector, but you can use the pads of C1 (which I don't recommend installing, unless you have stability issues) or pins 2 (GND) and 4 (VCC) of the IDC connector. The board needs 5V, I usually take those from an Arduino board but feel free to use whatever suits you.
 

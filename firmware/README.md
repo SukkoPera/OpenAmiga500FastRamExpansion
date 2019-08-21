@@ -12,7 +12,13 @@ If you read the above, you will know that these days you will only find the ATF1
 
 First of all you need to power the board. JTAG programmers are not supposed to provide power, hence you need to do so separately. The board does not have a dedicated power connector, but you can use the pads of C1 (which I don't recommend installing, unless you have stability issues) or pins 2 (GND) and 4 (VCC) of the IDC connector. The board needs 5V, I usually take those from an Arduino board but feel free to use whatever suits you.
 
-You will need the firmware in SVF format (either `4mb.svf` or `8mb.svf`, choose according to how you assembled your board) and the [UrJTAG software](http://urjtag.sourceforge.net). Connect your USB Blaster to the IDC connector on the board and plug it into an USB port on your PC. Then run urjtag as follows:
+On the software side, you will need [UrJTAG](http://urjtag.sourceforge.net). I have only tested version 2018.09, others might work or not. I am not sure this version is readily available in binary format, so you might have to compile it.
+
+You will also need to get the [BSDL (Boundary Scan Description Language) files for the 1502 CPLDs](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/BSDL). Download the zip file, uncompress it anywhere you like and take note of the path, you will need it later.
+
+Finally, you will need the firmware in SVF format, available in this folder. Use either `4mb.svf` or `8mb.svf` according to how you assembled your board.
+
+Now you are ready for the actual flashing, so connect your USB Blaster to the IDC connector on the board and plug it into an USB port on your PC. Then run urjtag as follows:
 
 ```
 sukko@shockwave firmware $ sudo jtag
@@ -32,7 +38,13 @@ jtag> cable UsbBlaster
 Connected to libftdi driver.
 ```
 
-This means that your USB Blaster was detected correctly. Now have it scan the JTAG chain:
+This means that your USB Blaster was detected correctly. Let's load the BSDL files, this is where you will need to use the path you took note of at the beginning:
+```
+jtag> bsdl <path>
+jtag>
+```
+
+Now we can scan the JTAG chain:
 ```
 jtag> detect
 IR length: 10

@@ -10,6 +10,8 @@ Before installing the board into your Amiga, you will need to flash the firmware
 
 If you read the above, you will know that these days you will only find the ATF1502AS-10JC44 (or -10JU44) on the market, but you will need to use a >50€ programmer (only once!) to program it, which doesn't sound reasonable. Besides, all the tools mentioned above are Windows-only so if you are a Linux user like me, you're pretty screwed. Luckily, there is a solution that allows flashing the Atmel chip with the cheap USB Blaster clones. I have developed and tested it under Linux, but it should also work on Windows and OS X.
 
+*NOTE: One user recommended to get a full size Altera USB Blaster cable clone, not the cheaper USB 'Mini' Blaster clone, as he could not get the latter to work with the ATF1502AS. Either the Mini programmer does not support this chip or has some issues with the software we use, but switching to the full size Blaster cable RevC solved this issue.*
+
 First of all you need to power the board. JTAG programmers are not supposed to provide power, hence you need to do so separately. The board does not have a dedicated power connector, but you can use the pads of C1 (which I don't recommend installing, unless you have stability issues) or pins 2 (GND) and 4 (VCC) of the IDC connector. The board needs 5V, I usually take those from an Arduino board but feel free to use whatever suits you.
 
 On the software side, you will need [UrJTAG](http://urjtag.sourceforge.net). I have only tested version 2018.09, others might work or not. I am not sure this version is readily available in binary format, so you might have to compile it.
@@ -88,3 +90,4 @@ An SVF file can be produced using [Microchip's ATMISP tool](https://www.microchi
 
 
 *Thanks a lot to lvd for providing most of the above information and helping me come up with the Linux flashing procedure.*
+*Also thanks to majinga and go0se for testing and helping improve this procedure.*

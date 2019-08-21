@@ -14,7 +14,7 @@ If you read the above, you will know that these days you will only find the ATF1
 
 First of all you need to power the board. JTAG programmers are not supposed to provide power, hence you need to do so separately. The board does not have a dedicated power connector, but you can use the pads of C1 (which I don't recommend installing, unless you have stability issues) or pins 2 (GND) and 4 (VCC) of the IDC connector. The board needs 5V, I usually take those from an Arduino board but feel free to use whatever suits you.
 
-On the software side, you will need [UrJTAG](http://urjtag.sourceforge.net). I have only tested version 2018.09, others might work or not. I am not sure this version is readily available in binary format, so you might have to compile it.
+On the software side, you will need [UrJTAG](http://urjtag.sourceforge.net). I have only tested version 2018.09, others might work or not. I am not sure this version is readily available in binary format, so you might have to compile it from sources.
 
 You will also need to get the [BSDL (Boundary Scan Description Language) files for the 1502 CPLDs](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/BSDL). Download the zip file, uncompress it anywhere you like and take note of the path, you will need it later.
 
@@ -58,7 +58,7 @@ Device Id: 00000001010100000010000000111111 (0x0150203F)
   Filename:     /usr/share/urjtag/atmel/atf15xx/atf1502as
 ```
 
-This means that the CPLD was found and it is ready to be programmed. If you get no output at this step, try disconnecting and reconnecting the USB Blaster or power to the board. Then start the flashing:
+This means that the CPLD was found and it is ready to be programmed. If you get no output at this step, try disconnecting and reconnecting the USB Blaster or power to the board. If the chip gets detected but it is reported as unsupported, check that you downloaded the correct BSDL files. Then start the flashing:
 ```
 jtag> svf 8mb.svf progress stop
 warning: unimplemented mode 'ABSENT' for TRST

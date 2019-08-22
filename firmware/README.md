@@ -42,7 +42,7 @@ Connected to libftdi driver.
 
 This means that your USB Blaster was detected correctly. Let's load the BSDL files, this is where you will need to use the path you took note of at the beginning:
 ```
-jtag> bsdl <path>
+jtag> bsdl path <path>
 jtag>
 ```
 
@@ -52,10 +52,7 @@ jtag> detect
 IR length: 10
 Chain length: 1
 Device Id: 00000001010100000010000000111111 (0x0150203F)
-  Manufacturer: Atmel (0x03F)
-  Part(0):      ATF1502ASV (0x1502)
-  Stepping:     A
-  Filename:     /usr/share/urjtag/atmel/atf15xx/atf1502as
+  Filename:     bsdl/1502AS_A44.bsd
 ```
 
 This means that the CPLD was found and it is ready to be programmed. If you get no output at this step, try disconnecting and reconnecting the USB Blaster or power to the board. If the chip gets detected but it is reported as unsupported, check that you downloaded the correct BSDL files. Then start the flashing:

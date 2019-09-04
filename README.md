@@ -42,7 +42,7 @@ Before reassembling your case, I recommend to run [SysTest/Amiga Test Kit](https
 ### Limitations
 OpenAmiga500FastRamExpansion only has a partial implementation of the AutoConfig protocol. This has the following consequences:
 - On the A500 it will only work if nothing is connected to the side expansion port (or if whatever is connected does NOT use AutoConfig).
-- On the A2000 it will only work if no boards using AutoConfig are installed in the machine.
+- On the A2000 it will only work if nothing is installed in the first Zorro expansion slot (again: or if whatever you installed there does not use AutoConfig).
 - On the CDTV it just won't work (since the DMAC uses AutoConfig and is built-in.)
 
 The only way to get around these limitations is flashing an alternative firmware on the board which does not use AutoConfig, but then you will have to add the RAM manually in Workbench, using the `addmem` utility. More on this soon.

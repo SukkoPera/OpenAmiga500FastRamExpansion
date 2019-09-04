@@ -39,6 +39,14 @@ When assembly is complete, open your A500 and remove the top shield. Carefully r
 
 Before reassembling your case, I recommend to run [SysTest/Amiga Test Kit](https://github.com/keirf/Amiga-Stuff). Use the Memory option (<kbd>F1</kbd>), it must show 4/8 MB of Fast RAM. Then start the Memory Test (<kbd>F1</kbd> again) and let it run for 50-100 rounds: if it doesn't find any errors, you are probably good to go. If you get any errors, check your solder joints, starting from actual the RAM chips, as the SOJ package is not very hand-soldering-friendly.
 
+### Limitations
+OpenAmiga500FastRamExpansion only has a partial implementation of the AutoConfig protocol. This has the following consequences:
+- On the A500 it will only work if nothing is connected to the side expansion port (or if whatever is connected does NOT use AutoConfig).
+- On the A2000 it will only work if no boards using AutoConfig are installed in the machine.
+- On the CDTV it just won't work (since the DMAC uses AutoConfig and is built-in.)
+
+The only way to get around these limitations is flashing an alternative firmware on the board which does not use AutoConfig, but then you will have to add the RAM manually in Workbench, using the `addmem` utility. More on this soon.
+
 ### License
 The OpenAmiga500FastRamExpansion documentation, including the design itself, is copyright &copy; SukkoPera 2019.
 

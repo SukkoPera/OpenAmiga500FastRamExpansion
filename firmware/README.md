@@ -1,5 +1,5 @@
 # Firmware
-Before installing the board into your Amiga, you will need to flash the firmware to the CPLD chip.
+Before installing the board into your Amiga, you will need to program the CPLD chip.
 
 The firmware is the same as the original project by lvd. It has been copied here for convenience, but it is unmodified.
 

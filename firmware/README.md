@@ -96,6 +96,6 @@ Quartus will produce a .POF file. This can be converted to a .JED file for Atmel
 An SVF file can be produced using [Microchip's ATMISP tool](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/atmisp), which is also Windows-only.
 
 ## Thanks
-- lvd for providing most of the above information and helping me come up with the Linux flashing procedure.
-- majinga and go0se for testing and helping improve this procedure.
-- EAB forum user katarakt for the note on Quartus.
+- *lvd* for providing most of the above information and helping me come up with the Linux flashing procedure.
+- *majinga* and *go0se* for testing and helping improve this procedure.
+- EAB forum user *katarakt* for the note on Quartus.

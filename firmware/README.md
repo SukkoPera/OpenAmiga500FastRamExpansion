@@ -12,7 +12,7 @@ Atmel/Microchip makes compatible devices under the `ATF1502` series, so the `ATF
 ### Altera EPM7032SLC44
 You will need to load the `.POF` file in `quartus_pgm` and flash it using one of the cheap USB Blaster programmer clones you can find everywhere.
 
-*NOTE: One user recommends NOT to use the auto-detect button as it will add two ICs to the window. Just load the .POF and flash it.*
+*NOTE: One user recommends NOT to use the auto-detect button as it will add two ICs to the window. Just select the USB Blaster hardware and load the .POF file (make sure to check only Program/Configure + Verify!). Then hit the Start button to flash.*
 
 ### Atmel/Microchip ATF1502AS-10JC44 (Official way)
 You can program the .JED file using the [ATDH1150USB](https://www.microchip.com/DevelopmentTools/ProductDetails/ATDH1150USB) programmer.

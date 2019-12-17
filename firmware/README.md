@@ -26,7 +26,7 @@ First of all you need to power the board. JTAG programmers are not supposed to p
 
 On the software side, you will need [UrJTAG](http://urjtag.sourceforge.net). I have only tested version 2018.09, others might work or not. I am not sure this version is readily available in binary format, so you might have to compile it from sources.
 
-You will also need to get the [BSDL (Boundary Scan Description Language) files for the 1502 CPLDs](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/BSDL). Download the zip file, uncompress it anywhere you like and take note of the path, you will need it later.
+You will also need to get the [BSDL (Boundary Scan Description Language) files for the 1502 CPLDs](http://ww1.microchip.com/downloads/en/DeviceDoc/1502bsdl.zip). Download the zip file, uncompress it anywhere you like and take note of the path, you will need it later.
 
 Finally, you will need the firmware in SVF format, available in this folder. Use either `4mb.svf` or `8mb.svf` according to how you assembled your board.
 

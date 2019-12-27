@@ -1,14 +1,24 @@
 # Firmware
-This board uses the same firmware as the original project by lvd. It has been copied here for convenience, but it is unmodified.
+Before installing the board into your Amiga, you will need to program the CPLD chip.
 
-The firmware was originally developed for Altera EPM7032SLC44 CPLDs, these use the .POF file. You can flash it with `quartus_pgm` and one of the cheap USB Blaster programmer clones you can find everywhere.
+The firmware is the same as the original project by lvd. It has been copied here for convenience, but it is unmodified.
 
-Atmel/Microchip makes compatible devices under the ATF1502 series, so the ATF1502AS-10JC44 can be used as an alternative, which is easier to find nowadays (-10J*U*44 is fine as well). It can be programmed with the .JED file using the [ATDH1150USB](https://www.microchip.com/DevelopmentTools/ProductDetails/ATDH1150USB) programmer.
+The firmware was originally developed for Altera `EPM7032SLC44` CPLDs.
+
+Atmel/Microchip makes compatible devices under the `ATF1502` series, so the `ATF1502AS-10JC44` can be used as an alternative, which is easier to find nowadays (-10J*U*44 is fine as well).
 
 ## Flashing the firmware
-Before installing the board into your Amiga, you will need to flash the firmware to the CPLD chip.
 
-If you read the above, you will know that these days you will only find the ATF1502AS-10JC44 (or -10JU44) on the market, but you will need to use a >50€ programmer (only once!) to program it, which doesn't sound reasonable. Besides, all the tools mentioned above are Windows-only so if you are a Linux user like me, you're pretty screwed. Luckily, there is a solution that allows flashing the Atmel chip with the cheap USB Blaster clones. I have developed and tested it under Linux, but it should also work on Windows and OS X.
+### Altera EPM7032SLC44
+You will need to load the `.POF` file in `quartus_pgm` and flash it using one of the cheap USB Blaster programmer clones you can find everywhere.
+
+*NOTE: One user recommends NOT to use the auto-detect button as it will add two ICs to the window. Just select the USB Blaster hardware and load the .POF file (make sure to check only Program/Configure + Verify!). Then hit the Start button to flash.*
+
+### Atmel/Microchip ATF1502AS-10JC44 (Official way)
+You can program the .JED file using the [ATDH1150USB](https://www.microchip.com/DevelopmentTools/ProductDetails/ATDH1150USB) programmer.
+
+### Atmel/Microchip ATF1502AS-10JC44 (Cheaper and hackish way)
+These days you will only find the ATF1502AS-10JC44 (or -10JU44) on the market, but, if you read the above, you will know that you will need to buy a >50€ programmer to program it, which doesn't sound reasonable, as this will most likely only need to be done once. Besides, all the tools mentioned above are Windows-only so if you are a Linux user like me, you're pretty screwed. Luckily, there is a solution that allows flashing the Atmel chip with the cheap USB Blaster clones. I have developed and tested it under Linux, but it should also work on Windows and OS X.
 
 *NOTE: One user recommended to get a full size Altera USB Blaster cable clone, not the cheaper USB 'Mini' Blaster clone, as he could not get the latter to work with the ATF1502AS. Either the Mini programmer does not support this chip or has some issues with the software we use, but switching to the full size Blaster cable RevC solved this issue.*
 
@@ -16,7 +26,7 @@ First of all you need to power the board. JTAG programmers are not supposed to p
 
 On the software side, you will need [UrJTAG](http://urjtag.sourceforge.net). I have only tested version 2018.09, others might work or not. I am not sure this version is readily available in binary format, so you might have to compile it from sources.
 
-You will also need to get the [BSDL (Boundary Scan Description Language) files for the 1502 CPLDs](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/BSDL). Download the zip file, uncompress it anywhere you like and take note of the path, you will need it later.
+You will also need to get the [BSDL (Boundary Scan Description Language) files for the 1502 CPLDs](http://ww1.microchip.com/downloads/en/DeviceDoc/1502bsdl.zip). Download the zip file, uncompress it anywhere you like and take note of the path, you will need it later.
 
 Finally, you will need the firmware in SVF format, available in this folder. Use either `4mb.svf` or `8mb.svf` according to how you assembled your board.
 
@@ -85,6 +95,7 @@ Quartus will produce a .POF file. This can be converted to a .JED file for Atmel
 ### JED => SVF
 An SVF file can be produced using [Microchip's ATMISP tool](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/atmisp), which is also Windows-only.
 
-
-*Thanks a lot to lvd for providing most of the above information and helping me come up with the Linux flashing procedure.*
-*Also thanks to majinga and go0se for testing and helping improve this procedure.*
+## Thanks
+- *lvd* for providing most of the above information and helping me come up with the Linux flashing procedure.
+- *majinga* and *go0se* for testing and helping improve this procedure.
+- EAB forum user *katarakt* for the note on Quartus.

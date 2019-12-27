@@ -20,8 +20,6 @@ You can program the .JED file using the [ATDH1150USB](https://www.microchip.com/
 ### Atmel/Microchip ATF1502AS-10JC44 (Cheaper and hackish way)
 These days you will only find the ATF1502AS-10JC44 (or -10JU44) on the market, but, if you read the above, you will know that you will need to buy a >50€ programmer to program it, which doesn't sound reasonable, as this will most likely only need to be done once. Besides, all the tools mentioned above are Windows-only so if you are a Linux user like me, you're pretty screwed. Luckily, there is a solution that allows flashing the Atmel chip with the cheap USB Blaster clones. I have developed and tested it under Linux, but it should also work on Windows and OS X.
 
-*NOTE: One user recommended to get a full size Altera USB Blaster cable clone, not the cheaper USB 'Mini' Blaster clone, as he could not get the latter to work with the ATF1502AS. Either the Mini programmer does not support this chip or has some issues with the software we use, but switching to the full size Blaster cable RevC solved this issue.*
-
 First of all you need to power the board. JTAG programmers are not supposed to provide power, hence you need to do so separately. The board does not have a dedicated power connector, but you can use the pads of C1 (which I don't recommend installing, unless you have stability issues) or pins 2 (GND) and 4 (VCC) of the IDC connector. The board needs 5V, I usually take those from an Arduino board but feel free to use whatever suits you.
 
 On the software side, you will need [UrJTAG](http://urjtag.sourceforge.net). I have only tested version 2018.09, others might work or not. I am not sure this version is readily available in binary format, so you might have to compile it from sources.
@@ -83,6 +81,23 @@ Error svf: mismatch at position 64 for TDO
 
 Then there was an error during the flashing, check your wiring, power and try again.
 
+#### USB Blaster Clones
+You are recommended to get **a full-size Altera USB Blaster clone**, i.e. one of these:
+
+![Full-Size](img/good_usbblaster.jpg)
+
+Note the *Rev C*: I'm not sure if it is crucial, but the one I have says so and is working very well.
+
+Do **NOT** this:
+
+![Smaller](img/crappy_usbblaster.jpg)
+
+These do not work correctly and always hang between 47% and 49% of the flashing process.
+
+## Windows considerations
+I have managed to build a Windows binary of UrJTAG with only the minimum options needed to program these CPLDs through a USB Blaster. It was tested by a couple of users and seemed to be working fine. A user even automated the procedure, so now you can just download the `UrJTAG.zip` file from the `windows` folder, unzip it and double click on the `runme.bat` script (with the programmer and board already connected to your PC): this should guide you through the whole flashing process.
+
+I hope this works for you, but please note that **it is unsupported**, as I have no computers running Windows.
 
 ## Tinkering with the firmware
 The firmware was developed with Quartus 7.2, somewhat totally old and outdated, but I never got any problems with it. I DO NOT recommend using Quartus 6.x as I caught it generating wrong designs (in a way, nothing is working and when you swap to Quartus 7.2 not touching you project, everything is working back).
@@ -99,3 +114,5 @@ An SVF file can be produced using [Microchip's ATMISP tool](https://www.microchi
 - *lvd* for providing most of the above information and helping me come up with the Linux flashing procedure.
 - *majinga* and *go0se* for testing and helping improve this procedure.
 - EAB forum user *katarakt* for the note on Quartus.
+- Szymon Roslowski and Graham P. for testing and improving the Windows package.
+

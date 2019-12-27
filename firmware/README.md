@@ -86,16 +86,16 @@ You are recommended to get **a full-size Altera USB Blaster clone**, i.e. one of
 
 ![Full-Size](img/good_usbblaster.jpg)
 
-Note the *Rev C*: I'm not sure if it is crucial, but the one I have says so and is working very well.
+Note the *Rev.C*: I'm not sure if it is crucial, but the one I have says so and is working very well.
 
-Do **NOT** this:
+Do **NOT** buy this:
 
 ![Smaller](img/crappy_usbblaster.jpg)
 
-These do not work correctly and always hang between 47% and 49% of the flashing process.
+It does not work correctly, as it always hangs between 47% and 49% of the flashing process.
 
 ## Windows considerations
-I have managed to build a Windows binary of UrJTAG with only the minimum options needed to program these CPLDs through a USB Blaster. It was tested by a couple of users and seemed to be working fine. A user even automated the procedure, so now you can just download the `UrJTAG.zip` file from the `windows` folder, unzip it and double click on the `runme.bat` script (with the programmer and board already connected to your PC): this should guide you through the whole flashing process.
+I have managed to build a Windows binary of UrJTAG with only the minimum options needed to program these CPLDs through a USB Blaster. It was tested by a couple of users and seemed to be working fine. A user even automated the procedure, so now you can just download [the UrJTAG.zip file from the windows folder](windows/UrJTAG.zip), unzip it and double click on the `runme.bat` script (with the programmer and board already connected to your PC): this should guide you through the whole flashing process.
 
 I hope this works for you, but please note that **it is unsupported**, as I have no computers running Windows.
 

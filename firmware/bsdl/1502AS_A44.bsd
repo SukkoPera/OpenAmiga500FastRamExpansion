@@ -1,0 +1,324 @@
+-- File Name            : 1502AS_A44.BSD
+-- Created By           : Atmel Corporation
+-- Documentation        : ATF15xx Family BSDL
+-- BSDL Revision        : 2.1
+--
+-- Note                 : Some lines in this BSDL file might be
+--                        longer than 80 characters. Adjust to
+--                        word wrap width on your text editor
+--                        accordingly to prevent possible 
+--                        compile errors.
+--
+-- Status		: Preliminary
+-- Date Created		: 08/01/01
+-- Device               : ATF1502AS/ASL
+-- Package              : 44-Lead Thin Quad Flat Pack (TQFP)
+--
+-- *********************************************************************
+-- *                         IMPORTANT NOTICE                          *
+-- *                                                                   *
+-- *   Copyright 2001,2002 Atmel Corporation. All Rights Reserved.     *
+-- *                                                                   *
+-- *   Atmel assumes no responsibility or liability arising out of     *
+-- *   this application or use of any information described herein     *
+-- *   except as expressly agreed to in writing by Atmel Corporation.  *
+-- *                                                                   *
+-- *********************************************************************
+--
+-- Revision History	:
+-- 
+-- Rev 2.0 (07/19/01) 	- Initial version.
+-- Rev 2.1 (07/02/02) 	- Changed the 13th bit of the IDCODE to "X".
+-- 			  This allows the acceptance of both Device IDs.
+-- 
+entity F1502AS_A44 is
+generic (PHYSICAL_PIN_MAP : string := "TQFP44");
+
+port (
+--I/O Pins
+IO42   , IO43   , IO44   , IO2    , IO3    , IO5    , IO6    , 
+IO8    , IO10   , IO11   , IO12   , IO13   , IO14   , IO15   , 
+IO18   , IO19   , IO20   , IO21   , IO22   , IO23   , IO25   , 
+IO27   , IO28   , IO30   , IO31   , IO33   , IO34   , IO35   
+: inout bit;
+--JTAG Port Pins
+TCK     :in bit;
+TDI     :in bit;
+TDO     :out bit;
+TMS     :in bit;
+--Dedicated Input Pins
+IN37   , IN38   , IN39   , IN40   : in bit;
+--Power Pins
+VCC     :linkage bit_vector(1 to 4);
+--Ground Pins
+GND     :linkage bit_vector(1 to 4)
+);
+
+use STD_1149_1_1994.all;
+attribute COMPONENT_CONFORMANCE of F1502AS_A44 :
+	entity is "STD_1149_1_1993";
+
+attribute PIN_MAP of F1502AS_A44 : entity is PHYSICAL_PIN_MAP;
+constant TQFP44 : PIN_MAP_STRING :=
+--I/O pins
+"IO42   : 42  , IO43   : 43  , IO44   : 44  , IO2    : 2   , "&
+"IO3    : 3   , IO5    : 5   , IO6    : 6   , IO8    : 8   , "&
+"IO10   : 10  , IO11   : 11  , IO12   : 12  , IO13   : 13  , "&
+"IO14   : 14  , IO15   : 15  , IO18   : 18  , IO19   : 19  , "&
+"IO20   : 20  , IO21   : 21  , IO22   : 22  , IO23   : 23  , "&
+"IO25   : 25  , IO27   : 27  , IO28   : 28  , IO30   : 30  , "&
+"IO31   : 31  , IO33   : 33  , IO34   : 34  , IO35   : 35  , "&
+--Dedicated Input Pins
+"IN37   : 37  , IN38   : 38  , IN39   : 39  , IN40   : 40  , "&
+--JTAG ports
+"TCK    : 26  , TMS    : 7   , TDI    : 1   , TDO    : 32  , "&
+--Power Pins
+"VCC    : (9  , 17  , 29  , 41  ), "&
+--Ground Pins
+"GND    : (4  , 16  , 24  , 36  )";
+
+attribute TAP_SCAN_IN of TDI    :signal is true;
+attribute TAP_SCAN_MODE of TMS  :signal is true;
+attribute TAP_SCAN_OUT of TDO   :signal is true;
+attribute TAP_SCAN_CLOCK of TCK :signal is (10.00e6,BOTH);
+
+--Instruction Definitions
+attribute INSTRUCTION_LENGTH of F1502AS_A44  :entity is 10;
+attribute INSTRUCTION_OPCODE of F1502AS_A44  :entity is
+"EXTEST (0000000000),"&
+"BYPASS (1111111111),"&
+"SAMPLE (0001010101),"&
+"IDCODE (0001011001)";
+
+attribute INSTRUCTION_CAPTURE of F1502AS_A44 :entity is "0001011001";
+
+attribute IDCODE_REGISTER of F1502AS_A44 :entity is 
+"0000000101010000001X000000111111";  -- 0150203F or 0150303F
+
+attribute BOUNDARY_LENGTH of F1502AS_A44 :entity is 96;
+attribute BOUNDARY_REGISTER of F1502AS_A44 :entity is
+--Input, GOE1
+"0    (BC_4,IN38,input,X),"&
+ 
+--Input, GCLK1
+"1    (BC_4,IN37,input,X),"&
+
+--Input, MC17
+"2    (BC_4,IO35,input,X),"&
+
+--Input, MC18
+"3    (BC_4,IO34,input,X),"&
+
+--Input, MC19
+"4    (BC_4,IO33,input,X),"&
+
+--Input, MC21
+"5    (BC_4,IO31,input,X),"&
+
+--Input, MC22
+"6    (BC_4,IO30,input,X),"&
+
+--Input, MC23
+"7    (BC_4,IO28,input,X),"&
+
+--Input, MC24
+"8    (BC_4,IO27,input,X),"&
+
+--Input, MC26
+"9    (BC_4,IO25,input,X),"&
+
+--Input, MC27
+"10   (BC_4,IO23,input,X),"&
+
+--Input, MC28
+"11   (BC_4,IO22,input,X),"&
+
+--Input, MC29
+"12   (BC_4,IO21,input,X),"&
+
+--Input, MC30
+"13   (BC_4,IO20,input,X),"&
+
+--Input, MC31
+"14   (BC_4,IO19,input,X),"&
+
+--Input, MC32
+"15   (BC_4,IO18,input,X),"&
+
+--Input, MC16
+"16   (BC_4,IO15,input,X),"&
+
+--Input, MC15
+"17   (BC_4,IO14,input,X),"&
+
+--Input, MC14
+"18   (BC_4,IO13,input,X),"&
+
+--Input, MC13
+"19   (BC_4,IO12,input,X),"&
+
+--Input, MC12
+"20   (BC_4,IO11,input,X),"&
+
+--Input, MC11
+"21   (BC_4,IO10,input,X),"&
+
+--Input, MC10
+"22   (BC_4,IO8,input,X),"&
+
+--Input, MC8
+"23   (BC_4,IO6,input,X),"&
+
+--Input, MC7
+"24   (BC_4,IO5,input,X),"&
+
+--Input, MC6
+"25   (BC_4,IO3,input,X),"&
+
+--Input, MC5
+"26   (BC_4,IO2,input,X),"&
+
+--Input, MC3
+"27   (BC_4,IO44,input,X),"&
+
+--Input, MC2
+"28   (BC_4,IO43,input,X),"&
+
+--Input, MC1
+"29   (BC_4,IO42,input,X),"&
+
+--Input, GCLK2
+"30   (BC_4,IN40,input,X),"&
+
+--Input, GCLR
+"31   (BC_4,IN39,input,X),"&
+
+--I/O, MC17
+"32   (BC_1, * ,control, 0),"&
+"33   (BC_1, IO35,output3,1,32,0,Z),"&
+
+--I/O, MC18
+"34   (BC_1, * ,control, 0),"&
+"35   (BC_1, IO34,output3,1,34,0,Z),"&
+
+--I/O, MC19
+"36   (BC_1, * ,control, 0),"&
+"37   (BC_1, IO33,output3,1,36,0,Z),"&
+
+--Internal, MC20
+"38   (BC_1, * ,internal, 0),"&
+"39   (BC_1, * ,internal, X),"&
+
+--I/O, MC21
+"40   (BC_1, * ,control, 0),"&
+"41   (BC_1, IO31,output3,1,40,0,Z),"&
+
+--I/O, MC22
+"42   (BC_1, * ,control, 0),"&
+"43   (BC_1, IO30,output3,1,42,0,Z),"&
+
+--I/O, MC23
+"44   (BC_1, * ,control, 0),"&
+"45   (BC_1, IO28,output3,1,44,0,Z),"&
+
+--I/O, MC24
+"46   (BC_1, * ,control, 0),"&
+"47   (BC_1, IO27,output3,1,46,0,Z),"&
+
+--Internal, MC25
+"48   (BC_1, * ,internal, 0),"&
+"49   (BC_1, * ,internal, X),"&
+
+--I/O, MC26
+"50   (BC_1, * ,control, 0),"&
+"51   (BC_1, IO25,output3,1,50,0,Z),"&
+
+--I/O, MC27
+"52   (BC_1, * ,control, 0),"&
+"53   (BC_1, IO23,output3,1,52,0,Z),"&
+
+--I/O, MC28
+"54   (BC_1, * ,control, 0),"&    
+"55   (BC_1, IO22,output3,1,54,0,Z),"&
+
+--I/O, MC29
+"56   (BC_1, * ,control, 0),"&
+"57   (BC_1, IO21,output3,1,56,0,Z),"&
+
+--I/O, MC30
+"58   (BC_1, * ,control, 0),"&
+"59   (BC_1, IO20,output3,1,58,0,Z),"&
+
+--I/O, MC31
+"60   (BC_1, * ,control, 0),"&
+"61   (BC_1, IO19,output3,1,60,0,Z),"&
+
+--I/O, MC32
+"62   (BC_1, * ,control, 0),"&
+"63   (BC_1, IO18,output3,1,62,0,Z),"&
+
+--I/O, MC16
+"64   (BC_1, * ,control, 0),"&
+"65   (BC_1, IO15,output3,1,64,0,Z),"&
+
+--I/O, MC15
+"66   (BC_1, * ,control, 0),"&
+"67   (BC_1, IO14,output3,1,66,0,Z),"&
+
+--I/O, MC14
+"68   (BC_1, * ,control, 0),"&
+"69   (BC_1, IO13,output3,1,68,0,Z),"&
+
+--I/O, MC13
+"70   (BC_1, * ,control, 0),"&
+"71   (BC_1, IO12,output3,1,70,0,Z),"&
+
+--I/O, MC12
+"72   (BC_1, * ,control, 0),"&
+"73   (BC_1, IO11,output3,1,72,0,Z),"&
+
+--I/O, MC11
+"74   (BC_1, * ,control, 0),"&
+"75   (BC_1, IO10,output3,1,74,0,Z),"&
+
+--I/O, MC10
+"76   (BC_1, * ,control, 0),"&
+"77   (BC_1, IO8,output3,1,76,0,Z),"&
+
+--Internal, MC9 
+"78   (BC_1, * ,internal, 0),"&
+"79   (BC_1, * ,internal, X),"&
+
+--I/O, MC8 
+"80   (BC_1, * ,control, 0),"&
+"81   (BC_1, IO6,output3,1,80,0,Z),"&
+
+--I/O, MC7
+"82   (BC_1, * ,control, 0),"&
+"83   (BC_1, IO5,output3,1,82,0,Z),"&
+                   
+--I/O, MC6 
+"84   (BC_1, * ,control, 0),"&
+"85   (BC_1, IO3,output3,1,84,0,Z),"&
+
+--I/O, MC5
+"86   (BC_1, * ,control, 0),"&
+"87   (BC_1, IO2,output3,1,86,0,Z),"&
+
+--Internal, MC4 
+"88   (BC_1, * ,internal, 0),"&
+"89   (BC_1, * ,internal, X),"&
+
+--I/O, MC3 
+"90   (BC_1, * ,control, 0),"&
+"91   (BC_1, IO44,output3,1,90,0,Z),"&
+
+--I/O, MC2 
+"92   (BC_1, * ,control, 0),"&
+"93   (BC_1, IO43,output3,1,92,0,Z),"&
+
+--I/O, MC1 
+"94   (BC_1, * ,control, 0),"&
+"95   (BC_1, IO42,output3,1,94,0,Z)";
+
+end F1502AS_A44;

@@ -1,0 +1,51 @@
+
+I. Programming firmware into CPLD
+
+ As BUILD.txt states, you can easily use either Altera EPM7032SLC44-10 or
+Atmel ATF1502AS10JC44 CPLD, both in PLCC-44 package.  They are functionally
+equivalent and totally pin-compatible, so they are interchangeable.  Easy
+way to program either of them is to use ByteBlasterMV hardware connected to
+LPT port of PC.  Its schematics can be found on www.altera.com or just by
+googling its name.
+
+ For programming Altera device, use Quartus web edition software available
+for free at www.altera.com.  Use file "epm7032slc44-10.pof" file in
+"firmware" drawer as programming file.
+
+ Atmel device should be programmed with "atf1502as10jc44.jed" file using
+AtmelISP software found on www.atmel.com.  The same ByteBlasterMV hardware
+is still used.
+
+
+II. Using other CPLDs
+
+ If you are experienced enough with CPLD designing, you can surely use other
+CPLDs, for example EPM7064S or ATF1504 devices in same package.  In either
+case you have to recompile from scratch verilog source file provided in
+"source" drawer.  When creating firmware for ATF devices, compile the design
+using Quartus package for equivalent EPM70xxS device as usual, then use
+POF2JED utility found on www.atmel.com to get #?.jed file.
+
+
+III. Rebuilding and modifying firmware
+
+ You need doing this to use some other CPLD or to modify firmware, for
+example to have 4Mb with PCMCIA instead of 8Mb without, or whatever you
+want.
+
+ Of course, you must be experienced enough in designing with CPLDs or FPGAs.
+Though it is rather simple to start designing CPLDs, I believe this is not
+what you should start with when gathering initial experience with CPLDs.
+There is possibility to damage physically your Amiga with the incorrectly
+programmed CPLD.
+
+ To build firmware file from scratch, use Quartus Web Edition software from
+www.altera.com.  Besides obvious things like setting up project and
+selecting chip, you must:
+
+ 1.  define all pins according to schematics diagram,
+ 2.  in assignment editor, set all output pins as "slow slew rate".
+     Otherwise you can end up with instabilities in working board.
+
+ There are some comments in source verilog file so that you can easily
+modify it to support and autoconfigure 4 Mb of memory instead of 8.

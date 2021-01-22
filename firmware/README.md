@@ -110,6 +110,11 @@ Quartus will produce a .POF file. This can be converted to a .JED file for Atmel
 ### JED => SVF
 An SVF file can be produced using [Microchip's ATMISP tool](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/atmisp), which is also Windows-only.
 
+### Used chips from China
+The chips can be pre-used if you bought your ATF1502AS from China. Sometimes JTAG interface is disabled on them, preventing normal JTAG operations.
+
+To enable JTAG, connect +12V power through a 2.2kOhm resistor to pin 7 on the 68000 CPU connector. Afterwards flash the `atf1502as_erase.svf` file to the CLPD. Then you can follow the normal programming procedures.
+
 ## Thanks
 - *lvd* for providing most of the above information and helping me come up with the Linux flashing procedure.
 - *majinga* and *go0se* for testing and helping improve this procedure.

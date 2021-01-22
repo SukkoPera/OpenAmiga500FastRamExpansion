@@ -1,0 +1,1753 @@
+//  SVF file written by ATMISP version 7.3
+//  Created on: Fri Dec 25 22:48:30 2020
+//  SVF Rev. D  
+TRST ABSENT;
+ENDIR IDLE;
+ENDDR IDLE;
+HDR 0;
+HIR 0;
+TDR 0;
+TIR 0;
+RUNTEST 50021E-6 SEC;
+STATE RESET;
+STATE IDLE;
+RUNTEST 50021E-6 SEC;
+SIR 10 TDI (280);
+SDR 10 TDI (1b9);
+STATE IDLE;
+SIR 10 TDI (059);
+SDR 32 TDI (ffffffff)
+	TDO (0150203f)
+	MASK (ffffffff);
+STATE IDLE;
+SIR 10 TDI (2b3);
+SIR 10 TDI (29e);
+STATE IDLE;
+RUNTEST 210001E-6 SEC;
+SIR 10 TDI (2bf);
+STATE IDLE;
+STATE RESET;
+RUNTEST 50001E-6 SEC;
+STATE IDLE;
+SIR 10 TDI (280);
+SDR 10 TDI (000);
+STATE IDLE;
+RUNTEST 10001E-6 SEC;
+STATE RESET;
+RUNTEST 50021E-6 SEC;
+RUNTEST 50021E-6 SEC;
+STATE RESET;
+STATE IDLE;
+RUNTEST 50021E-6 SEC;
+SIR 10 TDI (280);
+SDR 10 TDI (1b9);
+STATE IDLE;
+SIR 10 TDI (2a1);
+SDR 11 TDI (00c);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (00d);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (00e);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (00f);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (010);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (011);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (012);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (013);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (014);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (015);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (016);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (017);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (018);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (019);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (01a);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (01b);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (01c);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (01d);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (01e);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (01f);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (020);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (021);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (022);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (023);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (024);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (025);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (026);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (027);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (028);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (029);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (02a);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (02b);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (02c);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (02d);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (02e);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (02f);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (030);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (031);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (032);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (033);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (034);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (035);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (036);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (037);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (038);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (039);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (03a);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (03b);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (03c);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (03d);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (03e);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (03f);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (040);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (041);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (042);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (043);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (044);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (045);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (046);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (047);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (048);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (049);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (04a);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (04b);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (04c);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (04d);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (04e);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (04f);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (050);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (051);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (052);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (053);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (054);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (055);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (056);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (057);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (058);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (059);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (05a);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (05b);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (05c);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (05d);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (05e);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (05f);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (060);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (061);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (062);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (063);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (064);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (065);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (066);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (067);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (068);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (069);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (06a);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (06b);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+STATE IDLE;
+SIR 10 TDI (2a1);
+SDR 11 TDI (080);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (081);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (082);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (083);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (084);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (085);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (086);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (087);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (088);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (089);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (08a);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (08b);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (08c);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (08d);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (08e);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (08f);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (090);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (091);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (092);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (093);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (094);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (095);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (096);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (097);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (098);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (099);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (09a);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (09b);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (09c);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (09d);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (09e);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (09f);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0a0);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0a1);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0a2);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0a3);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0a4);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0a5);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0a6);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0a7);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0a8);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0a9);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0aa);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0ab);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0ac);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0ad);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0ae);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0af);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0b0);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0b1);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0b2);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0b3);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0b4);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0b5);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0b6);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0b7);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0b8);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0b9);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0ba);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0bb);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0bc);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0bd);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0be);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0bf);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0c0);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0c1);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0c2);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0c3);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0c4);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0c5);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0c6);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0c7);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0c8);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0c9);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0ca);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0cb);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0cc);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0cd);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0ce);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0cf);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0d0);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0d1);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0d2);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0d3);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0d4);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0d5);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0d6);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0d7);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0d8);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0d9);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0da);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0db);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0dc);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0dd);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0de);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0df);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+STATE IDLE;
+SIR 10 TDI (2a1);
+SDR 11 TDI (000);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (001);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (002);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (003);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (004);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (005);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (006);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (007);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (008);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (009);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (00a);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (00b);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+STATE IDLE;
+SIR 10 TDI (2a1);
+SDR 11 TDI (0e0);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0e1);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0e2);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0e3);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+SIR 10 TDI (2a1);
+SDR 11 TDI (0e4);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (290);
+SDR 86 TDI (3fffffffffffffffffffff)
+	TDO (3fffffffffffffffffffff);
+STATE IDLE;
+SIR 10 TDI (2a1);
+SDR 11 TDI (200);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (292);
+SDR 4 TDI (f)
+	TDO (f);
+STATE IDLE;
+SIR 10 TDI (2a1);
+SDR 11 TDI (300);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (293);
+SDR 16 TDI (ffff)
+	TDO (ffff);
+STATE IDLE;
+SIR 10 TDI (2a1);
+SDR 11 TDI (100);
+SIR 10 TDI (28c);
+STATE IDLE;
+RUNTEST 20001E-6 SEC;
+SIR 10 TDI (291);
+SDR 32 TDI (ffffffff)
+	TDO (ffffffff);
+STATE IDLE;
+SIR 10 TDI (280);
+SDR 10 TDI (000);
+STATE IDLE;
+RUNTEST 10001E-6 SEC;
+STATE RESET;
+RUNTEST 50021E-6 SEC;

@@ -94,6 +94,10 @@ Do **NOT** buy this:
 
 It does not work correctly, as it always hangs between 47% and 49% of the flashing process.
 
+### Atmel/Microchip ATF1502AS-10JC44 (Through the Parallel port)
+
+As an alternative, if you have an old computer with LPT1 and some version of Windows, you can build [the cable mentioned here](https://github.com/MattisLind/82S100replacement) and use it with [Microchip's ATMISP tool](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/atmisp).
+
 ## Windows considerations
 I have managed to build a Windows binary of UrJTAG with only the minimum options needed to program these CPLDs through a USB Blaster. It was tested by a couple of users and seemed to be working fine. A user even automated the procedure, so now you can just download [the UrJTAG.zip file from the windows folder](windows/UrJTAG.zip), unzip it and double click on the `runme.bat` script (with the programmer and board already connected to your PC): this should guide you through the whole flashing process.
 
@@ -108,7 +112,7 @@ If you want to move to something newer, it seems that Quartus 10.x and 11.x are 
 Quartus will produce a .POF file. This can be converted to a .JED file for Atmel devices through [Microchip's POF2JED utility](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/pof2jed), which is Windows-only unfortunately.
 
 ### JED => SVF
-An SVF file can be produced using [Microchip's ATMISP tool](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/atmisp), which is also Windows-only.
+An SVF file can be produced using [ATMISP](https://www.microchip.com/design-centers/programmable-logic/spld-cpld/tools/software/atmisp), which is also Windows-only.
 
 ### Used chips from China
 The chips can be pre-used if you bought your ATF1502AS from China. Sometimes JTAG interface is disabled on them, preventing normal JTAG operations.

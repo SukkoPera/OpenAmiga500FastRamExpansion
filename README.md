@@ -6,7 +6,7 @@ OpenAmiga500FastRamExpansion is an Open Hardware 4/8 MB Fast RAM Expansion for t
 ### Summary
 Most low-end Amiga models only came with *Chip RAM*. "Big Box" models allowed for a different type of memory to be installed, known as *Fast RAM*, where *fast* means that it's dedicated to the main processor, so that it doesn't have to compete with the other chips in order to gain access to it (as is the case with Chip RAM). While both Chip and Fast RAM are limited in size, you can have at least a few MB of the latter on all Amigas (usually up to 8), while the former can never exceed 2 MB.
 
-OpenAmiga500FastRamExpansion will allow you to add 4 or 8 MB of Fast RAM to your Amiga 500. This way you will be able to run more applications at once and more quickly. If you combine it with [a chip RAM expansion](http://eab.abime.net/showthread.php?t=85395), you will also be able to run almost all games supported by WHDLoad, pushing your Amiga to its limits. The Fast RAM will be mapped to `$200000-$9fffff` (`$200000-$5fffff` for the 4 MB version).
+OpenAmiga500FastRamExpansion will allow you to add 4 or 8 MB of Fast RAM to your Amiga 500. This way you will be able to run more applications at once and more quickly. If you combine it with [a chip RAM expansion](http://eab.abime.net/showthread.php?t=85395), you will also be able to run almost all games supported by WHDLoad, pushing your Amiga to its limits.
 
 OpenAmiga500FastRamExpansion is basically a clone of [a RAM expansion produced by Kipper2K a few years ago](http://eab.abime.net/showthread.php?t=64218), based on [an earlier design by lvd/NedoPC](http://lvd.nedopc.com/Projects/a600_8mb/index.html). He has since stopped producing and selling these cards and I thought it was a pity that he didn't open his designs and actually took all of them down, as this card is quite cheap to build and really useful. So I set about recreating it from scratch.
 
@@ -31,21 +31,32 @@ RAM chips can either be soldered directly to the board or installed in sockets. 
 ### Assembly and Installation
 Normally it is not necessary to mount all the decoupling capacitors. I usually skip C4, C5, C9, C12, C15 and C18. Maybe C1 can be left out as well if you have a good power supply, your choice. R4 must be chosen according to the particular led you will be using for LD1. Actually you are free to skip LD1 and R4 altogether, if you hate power LEDs.
 
-After everything has been soldered, you will need to program the CPLD. Whenever you do so, **make sure to carefully remove the board from your Amiga, or you might risk damaging it**. You can find the firmware [here](https://github.com/SukkoPera/OpenAmiga500FastRamExpansion/tree/master/firmware), along with instructions on how to flash it. You can provide power through the pads of C1 if you need to do so.
+After everything has been soldered, you will need to program the CPLD. Whenever you do so, **make sure to carefully remove the board from your Amiga, or you might risk damaging it**. You can find the firmware [here](firmware/V2), along with instructions on how to flash it. You can provide power through the pads of C1 if you need to do so.
 
-Make sure to use the correct firmware version, according to how many chips you soldered on the board! For the 4 MB version, solder U7 and U8 only and use the dedicated firmware.
+Make sure to use the [correct firmware version](#Firmware), according to how many chips you soldered on the board! For the 4 MB version, solder U7 and U8 only and use the dedicated firmware.
 
 When assembly is complete, open your A500 and remove the top shield. Carefully remove the CPU (largest chip at bottom left of the board), using a chip extractor or a small flat screwdriver, taking care not to break/bend any pins. Plug it on the board, matching the orientation, and plug the whole board in the CPU socket.
 
 Before reassembling your case, I recommend to run [SysTest/Amiga Test Kit](https://github.com/keirf/Amiga-Stuff). Use the Memory option (<kbd>F1</kbd>), it must show 4/8 MB of Fast RAM. Then start the Memory Test (<kbd>F1</kbd> again) and let it run for 50-100 rounds: if it doesn't find any errors, you are probably good to go. If you get any errors, check your solder joints, starting from actual the RAM chips, as the SOJ package is not very hand-soldering-friendly.
 
-### Limitations
-OpenAmiga500FastRamExpansion only has a partial implementation of the AutoConfig protocol. This has the following consequences:
+### Firmware
+If you are using Kickstart 2.x or higher you should use the latest V2 firmware [here](firmware/V2) noting that it requires an ATF1504AS rather than the older version's ATF1502
+
+If you are using Kickstart 1.3 you will need to use the [V1 Firmware here](firmware/V1)
+
+#### V2 Firmware new features
+Thanks to two new features this board is compatible with other autoconfig devices and should no longer cause any conflicts
+* Autoconfig snooping - This board will configure itself after every other Autoconfig device
+* Autosizing - The firmware will shrink the configured size automatically to make it fit within the remaining free memory pool (8M/4M/2M/1M).
+
+#### V1 Firmware Limitations
+The V1 Firmware for OpenAmiga500FastRamExpansion only has a partial implementation of the AutoConfig protocol. This has the following consequences:
 - On the A500 it will only work if nothing is connected to the side expansion port (or if whatever is connected does NOT use AutoConfig).
-- On the A2000 it will only work if nothing is installed in the first Zorro expansion slot (again: or if whatever you installed there does not use AutoConfig).
+- On the A2000 it will only work if nothing is installed in the Zorro expansion slots (again: or if whatever you installed there does not use AutoConfig).
 - On the CDTV it just won't work (since the DMAC uses AutoConfig and is built-in.)
 
-The only way to get around these limitations is flashing an alternative firmware on the board which does not use AutoConfig, but then you will have to add the RAM manually in Workbench, using the `addmem` utility. More on this soon.
+Because of these limitations it is recommended to use the new Firmware where possible, this will allow your board to coexist with other Autoconfig devices.
+If you cannot use the V2 firmware for some reason (i.e you use Kickstart 1.3) then the only way to get around these limitations is flashing an alternative firmware on the board which does not use AutoConfig, but then you will have to add the RAM manually in Workbench, using the `addmem` utility. More on this soon.
 
 ### License
 The OpenAmiga500FastRamExpansion documentation, including the design itself, is copyright &copy; SukkoPera 2019.

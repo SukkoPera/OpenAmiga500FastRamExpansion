@@ -1,0 +1,100 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 09:31:48  January 28, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		SukkoGottaGoFast_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY MAX7000S
+set_global_assignment -name DEVICE "EPM7064SLC44-10"
+set_global_assignment -name TOP_LEVEL_ENTITY SukkoGottaGoFast
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:31:48  JANUARY 28, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name DEVICE_FILTER_PACKAGE PLCC
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 44
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 10
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_1 -to RESETn
+set_location_assignment PIN_6 -to DBUS[12]
+set_location_assignment PIN_8 -to DBUS[13]
+set_location_assignment PIN_9 -to DBUS[14]
+set_location_assignment PIN_11 -to DBUS[15]
+set_location_assignment PIN_12 -to ADDR_HI[23]
+set_location_assignment PIN_14 -to ADDR_HI[22]
+set_location_assignment PIN_16 -to ADDR_HI[21]
+set_location_assignment PIN_17 -to ADDR_HI[20]
+set_location_assignment PIN_18 -to ADDR_HI[19]
+set_location_assignment PIN_19 -to ADDR_HI[18]
+set_location_assignment PIN_20 -to ADDR_HI[17]
+set_location_assignment PIN_21 -to ADDR_HI[16]
+set_location_assignment PIN_24 -to ADDR_LO[6]
+set_location_assignment PIN_25 -to ADDR_LO[5]
+set_location_assignment PIN_26 -to ADDR_LO[4]
+set_location_assignment PIN_27 -to ADDR_LO[3]
+set_location_assignment PIN_28 -to ADDR_LO[2]
+set_location_assignment PIN_29 -to ADDR_LO[1]
+set_location_assignment PIN_43 -to CLK
+set_location_assignment PIN_39 -to LCASn
+set_location_assignment PIN_34 -to RAS0n
+set_location_assignment PIN_36 -to RAS1n
+set_location_assignment PIN_37 -to RAS2n
+set_location_assignment PIN_40 -to RAS3n
+set_location_assignment PIN_31 -to mux_switch
+set_location_assignment PIN_41 -to UCASn
+set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/SukkoGottaGoFast.vt
+set_global_assignment -name VERILOG_FILE SukkoGottaGoFast.v
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH SukkoGottaGoFast_vlg_tst -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME SukkoGottaGoFast_vlg_tst -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id SukkoGottaGoFast_vlg_tst
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME SukkoGottaGoFast_vlg_tst -section_id SukkoGottaGoFast_vlg_tst
+set_global_assignment -name OPTIMIZE_HOLD_TIMING OFF
+set_global_assignment -name OPTIMIZE_MULTI_CORNER_TIMING OFF
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/SukkoGottaGoFast.vt -section_id SukkoGottaGoFast_vlg_tst
+set_location_assignment PIN_32 -to TCK
+set_location_assignment PIN_7 -to TDI
+set_location_assignment PIN_38 -to TDO
+set_location_assignment PIN_13 -to TMS
+set_location_assignment PIN_2 -to ASn
+set_location_assignment PIN_44 -to UDSn
+set_location_assignment PIN_33 -to LDSn
+set_location_assignment PIN_5 -to MA1
+set_location_assignment PIN_4 -to MA0

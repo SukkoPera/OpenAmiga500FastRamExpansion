@@ -20,9 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Config defines
 `define autoconfig     // If disabled RAM is always mapped to $200000-9FFFFF
 //`define cdtv         // Uncomment to build CDTV compatible version
-//`define Offer_6M     // Offer 2MB+4MB block (useful for A2091/A590)
 //`define Size_4MB     // 4MB Maximum, Only uses memory chips U7 & U8
-`define snoopy         // Wireless Autoconfig, configures board last (requires KS 2 or higher!)
 
 module SukkoGottaGoFast(
     input CLK,
@@ -55,20 +53,24 @@ reg refresh_cas;
 reg [7:0] addr_match;
 reg AS_last;
 reg RWn;
+
 `ifdef autoconfig
 // Autoconfig
 localparam [15:0] mfg_id  = 16'h07DB;
 localparam [7:0]  prod_id = 8'd03;
 localparam [15:0] serial  = 16'd420;
 
+localparam Offer_Block1 = 3'b000,
+           Offer_Block2 = 3'b001,
+           Offer_Block3 = 3'b010,
+           Offer_Block4 = 3'b011,
+           SHUTUP       = 3'b100;
+
 wire autoconfig_cycle;
 reg shutup = 0;
-reg CFGOUTn = 1;
 reg configured;
 reg [3:0] data_out;
 
-
-`ifdef snoopy
 // Autoconfig bus snooping
 //
 // For some reason Kickstart 2 and up scan the chain multiple times
@@ -78,8 +80,12 @@ reg [3:0] data_out;
 reg [3:0] mfg_bad;
 reg snoop_cfg;
 reg snoop_cfg_next;
+reg [3:0] board_reg00;
+reg [3:0] board_reg01;
 reg [3:0] snooped_autoconfig_state;
+reg autoconfig_setup;
 reg [3:0] dbus_latched;
+reg CFGOUTn;
 
 always @(posedge CLK)
 begin
@@ -92,12 +98,21 @@ begin
     snoop_cfg_next <= 1'b0;
     snoop_cfg <= 1'b0;
     mfg_bad <= 'b0;
+    snooped_autoconfig_state <= Offer_Block1;
   end else if (ADDR_HI[23:16] == 8'hE8 & RWn) begin
     case (ADDR_LO[6:1])
     // Chain snooping
     //
     // If Reserved byte is not $F or manufacturer id is $FFFF then no board is answering
     // Once this happens we can set ourselves up to talk to the next autoconfig query
+
+
+    // Sniff board configuration sizes so we can shrink our offering appropriately
+    'h00>>1:
+     board_reg00 <= dbus_latched;
+    'h02>>1:
+     board_reg01 <= dbus_latched;
+
     'h0C>>1:
       if (!(dbus_latched == 4'hF)) begin // Reserved byte - Should be $FF
         snoop_cfg_next <= 1;
@@ -118,76 +133,76 @@ begin
       if (dbus_latched == 4'hF) begin // Manufacturer ID - Should not be $FFFF
         mfg_bad[0] <= 1;
       end
-    'h42>>1, 'h40>>1:
+    'h3C>>1:
       if (snoop_cfg_next == 1) begin
        snoop_cfg <= 1;
       end else if (mfg_bad[3:0] == 4'b1111) begin
        snoop_cfg <= 1;
       end
     endcase
+  end else if (ADDR_HI[23:16] == 8'hE8 & !RWn & !snoop_cfg) begin
+    // The other board is now being given it's address
+    // Adjust our offering appropriately
+    if (ADDR_LO[6:1] == 'h48>>1) begin
+      if (board_reg00[3:2] == 2'b11) begin
+        case (board_reg01[2:0])
+          3'b000: // 8MB
+          snooped_autoconfig_state <= SHUTUP;
+         3'b100, 3'b101, 3'b110: // 512k/1/2MB
+           if (snooped_autoconfig_state < SHUTUP) begin
+            snooped_autoconfig_state <= snooped_autoconfig_state + 1;
+           end
+         3'b111: // 4MB
+           if (snooped_autoconfig_state < Offer_Block3) begin
+            snooped_autoconfig_state <= snooped_autoconfig_state + 2;
+           end else begin
+            snooped_autoconfig_state <= SHUTUP;
+           end
+        endcase
+      end
+    end
   end
 end
-`endif
-
 
 reg [2:0] autoconfig_state;
-localparam   Offer_8M = 3'b000,
-// If offering 2MB + 4MB blocks you need to offer the 2MB block first
-// This is because of a kickstart bug where the memory config overflows if there is already 2MB configured before another 4MB then 2MB is configured...
-`ifdef Offer_6M
-        Offer_2M = 3'b001,
-        Offer_4M = 3'b010,
-`else
-        Offer_4M = 3'b001,
-        Offer_2M = 3'b010,
-`endif
-        Offer_1M = 3'b011,
-        SHUTUP   = 3'b100;
 
 assign DBUS[15:12] = (autoconfig_cycle & RWn & !ASn & !UDSn) ? data_out[3:0] : 4'bZ;
 
 assign autoconfig_cycle = (ADDR_HI[23:16] == 8'hE8) & snoop_cfg & CFGOUTn;
 
-// Assert Config out at end of bus cycle
+// Register Config in/out at end of bus cycle
 always @(posedge ASn or negedge RESETn)
 begin
   if (!RESETn) begin
-    CFGOUTn = 1'b1;
+    CFGOUTn <= 1'b1;
   end else begin
-    CFGOUTn = !shutup;
+    CFGOUTn <= !shutup;
   end
 end
 
-// Offers an 8MB block first, if there's no space offer 4MB, 2MB then 1MB before giving up
+// Offer up to 8MB in 2MB Blocks
 always @(posedge CLK or negedge RESETn)
 begin
   if (!RESETn) begin
-    data_out <= 4'bZ;
+    data_out <= 'bZ;
   end else if (autoconfig_cycle & RWn) begin
-    case (ADDR_LO[6:1])
-      6'h00:   data_out <= 4'b1110;
-      6'h01: 
-        case (autoconfig_state)
-          Offer_8M: data_out <= 4'b0000;
-          Offer_4M: data_out <= 4'b0111;
-          Offer_2M: data_out <= 4'b0110;
-          Offer_1M: data_out <= 4'b0101;
-          default:  data_out <= 4'b0000;
-        endcase
-      6'h02:   data_out <= ~prod_id[7:4]; // Product number
-      6'h03:   data_out <= ~prod_id[3:0]; // Product number
-      6'h04:   data_out <= ~4'b1000;
-      6'h05:   data_out <= ~4'b0000;
-      6'h08:   data_out <= ~mfg_id[15:12]; // Manufacturer ID
-      6'h09:   data_out <= ~mfg_id[11:8];  // Manufacturer ID
-      6'h0A:   data_out <= ~mfg_id[7:4];   // Manufacturer ID
-      6'h0B:   data_out <= ~mfg_id[3:0];   // Manufacturer ID
-      6'h10:   data_out <= ~serial[15:12]; // Serial number
-      6'h11:   data_out <= ~serial[11:8];  // Serial number
-      6'h12:   data_out <= ~serial[7:4];   // Serial number
-      6'h13:   data_out <= ~serial[3:0];   // Serial number
-      8'h20:   data_out <= 4'b0;
-      8'h21:   data_out <= 4'b0;
+    case (ADDR_LO[6:1])      
+      'h00:   data_out <= 4'b1110;
+      'h01:   data_out <= 4'b0110;
+      'h02:   data_out <= ~prod_id[7:4]; // Product number
+      'h03:   data_out <= ~prod_id[3:0]; // Product number
+      'h04:   data_out <= ~4'b1000;
+      'h05:   data_out <= ~4'b0000;
+      'h08:   data_out <= ~mfg_id[15:12]; // Manufacturer ID
+      'h09:   data_out <= ~mfg_id[11:8];  // Manufacturer ID
+      'h0A:   data_out <= ~mfg_id[7:4];   // Manufacturer ID
+      'h0B:   data_out <= ~mfg_id[3:0];   // Manufacturer ID
+      'h10:   data_out <= ~serial[15:12]; // Serial number
+      'h11:   data_out <= ~serial[11:8];  // Serial number
+      'h12:   data_out <= ~serial[7:4];   // Serial number
+      'h13:   data_out <= ~serial[3:0];   // Serial number
+      'h20:   data_out <= 4'b0;
+      'h21:   data_out <= 4'b0;
       default: data_out <= 4'hF;
     endcase
   end
@@ -196,78 +211,43 @@ end
 always @(negedge UDSn or negedge RESETn)
 begin
   if (!RESETn) begin
-    configured <= 1'b0;
-    shutup <= 1'b0;
-    addr_match <= 8'b00000000;
-`ifdef Size_4MB
-    autoconfig_state <= Offer_4M;
-`else
-    autoconfig_state <= Offer_8M;
-`endif
-     end else if (autoconfig_cycle & !ASn & !RWn) begin
-    if (ADDR_LO[6:1] == 6'h26) begin
-      // We've been told to shut up (not enough memory space)
-      // Try offering a smaller block
-      if (autoconfig_state >= SHUTUP-1) begin
-        // All options exhausted - time to shut up!
-        shutup <= 1;
-        autoconfig_state <= SHUTUP;
-      end else begin
-        // Offer the next smallest block
-        autoconfig_state <= autoconfig_state + 1;
-      end
+    configured       <= 1'b0;
+    shutup           <= 1'b0;
+    addr_match       <= 8'b00000000;
+    autoconfig_state <= Offer_Block1;
+    autoconfig_setup <= 1'b0;
+  end else if (autoconfig_setup == 0 & snoop_cfg == 1) begin
+    autoconfig_state <= snooped_autoconfig_state;
+    autoconfig_setup <= 1;
+    if (snooped_autoconfig_state == SHUTUP) begin
+      shutup <= 1;
     end
-    else if (ADDR_LO[6:1] == 8'h24) begin
-      case (autoconfig_state)
-        Offer_8M:
-          begin
-            addr_match <= 8'hFF;
-            shutup <= 1'b1;
-          end
-        Offer_4M:
-          begin
-            case(DBUS)
-              4'h2:    addr_match <= (addr_match|8'b00001111);
-              4'h4:    addr_match <= (addr_match|8'b00111100);
-              4'h6:    addr_match <= (addr_match|8'b11110000);
-            endcase
-            shutup <= 1'b1;
-          end
-        Offer_2M:
-          begin
-            case(DBUS)
-              4'h2:    addr_match <= (addr_match|8'b00000011);
-              4'h4:    addr_match <= (addr_match|8'b00001100);
-              4'h6:    addr_match <= (addr_match|8'b00110000);
-              4'h8:    addr_match <= (addr_match|8'b11000000);
-            endcase
-`ifndef Offer_6M
-            shutup <= 1'b1;
-`else
-            autoconfig_state <= Offer_4M;
-`endif
-          end
-        Offer_1M:
-          begin
-            case(DBUS)
-              4'h2:    addr_match <= (addr_match|8'b00000001);
-              4'h3:    addr_match <= (addr_match|8'b00000010);
-              4'h4:    addr_match <= (addr_match|8'b00000100);
-              4'h5:    addr_match <= (addr_match|8'b00001000);
-              4'h6:    addr_match <= (addr_match|8'b00010000);
-              4'h7:    addr_match <= (addr_match|8'b00100000);
-              4'h8:    addr_match <= (addr_match|8'b01000000);
-              4'h9:    addr_match <= (addr_match|8'b10000000);
-            endcase
-            shutup <= 1'b1;
-          end
-        default:  addr_match <= 8'b0;
-      endcase
+  end else if (autoconfig_cycle & !ASn & !RWn) begin
+    if (ADDR_LO[6:1] == 'h26) begin
+      // Shutup register
+      shutup <= 1;
+    end
+    else if (ADDR_LO[6:1] == 'h24) begin
+      // Configure Address Register
+      begin
+        case(DBUS)
+          4'h2:    addr_match <= (addr_match|8'b00000011);
+          4'h4:    addr_match <= (addr_match|8'b00001100);
+          4'h6:    addr_match <= (addr_match|8'b00110000);
+          4'h8:    addr_match <= (addr_match|8'b11000000);
+        endcase
+        if (autoconfig_state < Offer_Block4) begin
+          autoconfig_state <= autoconfig_state + 1;
+        end else begin
+          shutup <= 1;
+        end
+      end
       configured <= 1'b1;
     end
   end
 end
 `endif
+
 
 // Memory controller
 `ifndef Size_4MB

@@ -9,15 +9,15 @@ Atmel/Microchip makes compatible devices under the `ATF1502` series, so the `ATF
 
 ## Flashing the firmware
 
-### Altera EPM7032SLC44
+### Altera EPM7032SLC44/EPM7064SLC44
 You will need to load the `.POF` file in `quartus_pgm` and flash it using one of the cheap USB Blaster programmer clones you can find everywhere.
 
 *NOTE: One user recommends NOT to use the auto-detect button as it will add two ICs to the window. Just select the USB Blaster hardware and load the .POF file (make sure to check only Program/Configure + Verify!). Then hit the Start button to flash.*
 
-### Atmel/Microchip ATF1502AS-10JC44 (Official way)
+### Atmel/Microchip ATF1502AS-10JC44/ATF1504AS-10JC44 (Official way)
 You can program the .JED file using the [ATDH1150USB](https://www.microchip.com/DevelopmentTools/ProductDetails/ATDH1150USB) programmer.
 
-### Atmel/Microchip ATF1502AS-10JC44 (Cheaper and hackish way)
+### Atmel/Microchip ATF1502AS-10JC44/ATF1504AS-10JC44 (Cheaper and hackish way)
 These days you will only find the ATF1502AS-10JC44 (or -10JU44) on the market, but, if you read the above, you will know that you will need to buy a >50€ programmer to program it, which doesn't sound reasonable, as this will most likely only need to be done once. Besides, all the tools mentioned above are Windows-only so if you are a Linux user like me, you're pretty screwed. Luckily, there is a solution that allows flashing the Atmel chip with the cheap USB Blaster clones. I have developed and tested it under Linux, but it should also work on Windows and OS X.
 
 First of all you need to power the board. JTAG programmers are not supposed to provide power, hence you need to do so separately. The board does not have a dedicated power connector, but you can use the pads of C1 (which I don't recommend installing, unless you have stability issues) or pins 2 (GND) and 4 (VCC) of the IDC connector. The board needs 5V, I usually take those from an Arduino board but feel free to use whatever suits you.

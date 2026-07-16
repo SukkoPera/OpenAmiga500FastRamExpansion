@@ -98,3 +98,5 @@ set_location_assignment PIN_44 -to UDSn
 set_location_assignment PIN_33 -to LDSn
 set_location_assignment PIN_5 -to MA1
 set_location_assignment PIN_4 -to MA0
+set_global_assignment -name MAX7000_OPTIMIZATION_TECHNIQUE BALANCED
+set_global_assignment -name SYNTH_TIMING_DRIVEN_SYNTHESIS OFF

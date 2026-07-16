@@ -236,7 +236,12 @@ begin
           4'h6:    addr_match <= (addr_match|8'b00110000);
           4'h8:    addr_match <= (addr_match|8'b11000000);
         endcase
+`ifdef Size_4MB
+        // For 4MB build only offer two blocks
+        if (autoconfig_state < Offer_Block4 && !configured) begin
+`else
         if (autoconfig_state < Offer_Block4) begin
+`endif
           autoconfig_state <= autoconfig_state + 1;
         end else begin
           shutup <= 1;
@@ -256,8 +261,8 @@ assign RAS1n = !((ADDR_HI[22:21] == 2'b10 & access_ras) | (refresh_ras & refresh
 assign RAS2n = !((ADDR_HI[22:21] == 2'b11 & access_ras) | (refresh_ras & refresh_cas)); // $600000-7FFFFF
 assign RAS3n = !((ADDR_HI[22:21] == 2'b00 & access_ras) | (refresh_ras & refresh_cas)); // $800000-9FFFFF
 `else
-assign RAS0n = 1'b1;
-assign RAS1n = 1'b1;
+assign RAS0n = !((ADDR_HI[21] == 1'b0 & access_ras) | (refresh_ras & refresh_cas));
+assign RAS1n = !((ADDR_HI[21] == 1'b1 & access_ras) | (refresh_ras & refresh_cas));
 assign RAS2n = !((ADDR_HI[21] == 1'b0 & access_ras) | (refresh_ras & refresh_cas));
 assign RAS3n = !((ADDR_HI[21] == 1'b1 & access_ras) | (refresh_ras & refresh_cas));
 `endif
